@@ -1,0 +1,1 @@
+# AOC_AurelioJoao_UFRR_LabCircuitos_2026
