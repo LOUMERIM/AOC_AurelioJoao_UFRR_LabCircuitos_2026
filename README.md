@@ -40,6 +40,8 @@ Dicas de uso:
 | `parte2/parte2_microprograma.circ` | Unidade de controle microprogramada: µPC de 3 bits, ROM de microcódigo e lógica de despacho. |
 | `parte2/microcodigo.txt` | Conteúdo da ROM de microcódigo (formato carregável pelo simulador). |
 | `parte2/tabela_tempo.xlsx` | Tabela de tempo (estados × 9 sinais de controle) e cálculo do CPI. |
+| `Testes Parte II/cabeado` | Testes com os outputs do circuito cabeado |
+| `Testes Parte II/microcabeado` | Testes com os outputs do circuito microcabeado |
 | `.gitignore` | Arquivos ignorados pelo Git. |
 
 ## 4. Onde cada um dos 17 componentes foi instanciado
