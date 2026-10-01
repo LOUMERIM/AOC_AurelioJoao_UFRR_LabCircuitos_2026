@@ -62,7 +62,7 @@ Dicas de uso:
 | 10 | ULA de 8 bits | `parte2_microprograma.circ` | `parte2_microprograma` |
 | 11 | Extensor de sinal de 4 para 8 bits | não utilizado | - |
 | 12 | Máquina de estados com portas lógicas | `parte2_cabeada.circ` | `parte2_cabeada` |
-| 13 | Contador síncrono (µPC de 3 bits) | `parte2_microprograma.circ` | [PREENCHER] |
+| 13 | Contador síncrono (µPC de 3 bits) | `parte2_microprograma.circ` | `parte2_microprograma` |
 | 14 | Detector de paridade ímpar | `parte1_memoria.circ` | `GeradorParidade`, instanciado 2 vezes em `MemoriaPrincipal` (escrita e leitura) |
 | 15 | Otimização por mapas de Karnaugh | Relatório (Seção 3.3) | Equações implementadas em `parte2_cabeada` |
 | 16 | Decodificador de 7 segmentos | `parte1_cache.circ` | `Cache` (contador de acertos) |
