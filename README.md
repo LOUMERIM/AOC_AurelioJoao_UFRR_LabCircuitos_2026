@@ -18,7 +18,7 @@ Os arquivos `.circ` foram salvos com o **Logisim-Evolution 5.0.0**.
 
 1. Abra o Logisim-Evolution e use **Arquivo → Abrir**, escolhendo o `.circ` desejado.
 2. Cada arquivo contém vários circuitos (subcircuitos). Eles aparecem no painel lateral esquerdo; dê duplo clique no nome para abri-lo.
-3. Circuito principal de cada arquivo: `MemoriaPrincipal` (`parte1_memoria.circ`), `Cache` (`parte1_cache.circ`) e `parte2_cabeada` (`parte2_cabeada.circ`).
+3. Circuito principal de cada arquivo: `MemoriaPrincipal` (`parte1_memoria.circ`), `Cache` (`parte1_cache.circ`), `parte2_cabeada` (`parte2_cabeada.circ`) e `parte2_microprograma` (`parte2_microprograma.circ`) .
 4. Use a ferramenta **Poke** (mão) para alternar os pinos de entrada e o menu **Simular** para pulsar o clock manualmente.
 
 Dicas de uso:
@@ -51,16 +51,16 @@ Dicas de uso:
 | 02 | Multiplexador de 4 entradas | `parte1_memoria.circ` | `MemoriaPrincipal` (MUX de saída, selecionado por A5, A4) |
 | 02 | (leitura das linhas da cache) | `parte1_cache.circ` | `Reg_Cache` (MUX do rótulo e MUX da validade) |
 | 03 | XOR a partir de AND, NOT e OR | `parte1_cache.circ` | `XOR_manual`, instanciado 3 vezes em `Cache` |
-| 04 | Somador de 8 bits com constante 4 | [PREENCHER] | [PREENCHER] |
+| 04 | Somador de 8 bits com constante 4 | não utilizado | - |
 | 05 | Memória ROM de 8 bits | `parte1_memoria.circ` | `MemoriaPrincipal` (região 0x00–0x0F) |
-| 05 | (memória de microcódigo) | `parte2_microprograma.circ` | [PREENCHER] |
+| 05 | (memória de microcódigo) | `parte2_microprograma.circ` | `parte2_microprograma`  |
 | 06 | Memória RAM de 8 bits | `parte1_memoria.circ` | `MemoriaPrincipal` (região 0x10–0x1F) |
 | 06 | (arranjo de dados da cache) | `parte1_cache.circ` | `Cache` (RAM 8×8) |
 | 07 | Banco de registradores de 8 bits | `parte1_memoria.circ` | `BancoReg` (16 registradores, região 0x20–0x2F) |
 | 08 | Somador de 8 bits | `parte1_cache.circ` | `Somador_Manual`, usado em `Cache` (`Endereco_Seguinte`) |
-| 09 | Detector da sequência "101" | [PREENCHER] | [PREENCHER] |
-| 10 | ULA de 8 bits | [PREENCHER] | [PREENCHER] |
-| 11 | Extensor de sinal de 4 para 8 bits | [PREENCHER] | [PREENCHER] |
+| 09 | Detector da sequência "101" | `parte2_microprograma.circ` | `parte2_microprograma` |
+| 10 | ULA de 8 bits | `parte2_microprograma.circ` | `parte2_microprograma` |
+| 11 | Extensor de sinal de 4 para 8 bits | não utilizado | - |
 | 12 | Máquina de estados com portas lógicas | `parte2_cabeada.circ` | `parte2_cabeada` |
 | 13 | Contador síncrono (µPC de 3 bits) | `parte2_microprograma.circ` | [PREENCHER] |
 | 14 | Detector de paridade ímpar | `parte1_memoria.circ` | `GeradorParidade`, instanciado 2 vezes em `MemoriaPrincipal` (escrita e leitura) |
@@ -71,7 +71,7 @@ Dicas de uso:
 
 ## 5. Declaração de uso de ferramentas de IA generativa
 
-**Ferramenta:** Claude (Anthropic), via Claude Code.
+**Ferramenta:** Claude (Anthropic), via Claude Code e Gemini 3.1 Pro (Pro Extendido).
 
 **Parte I (Aurélio):**
 
@@ -79,8 +79,10 @@ Dicas de uso:
 - *Cálculos e planilha:* auxiliou na nos conceitos das formulações das fórmulas da planilha eletrônica, incluindo o mapa de Karnaugh do detector de primos, na tabela de acessos esperada, nas fórmulas da planilha e na correção de referências de célula.
 - *Relatório:* na revisão do texto.
 
-**Parte II (João):** [PREENCHER: ferramentas, etapas e finalidade].
-
+**Parte II (João):**
+- *Construção:* A IA foi usada para diagnosticar erros ao longo do percurso e justificar porque certas ligações apresentavam problemas e como conserta-las. Nenhum dos dois circuitos foi gerado por meio da Inteligência Artificial, tendo o papel de meramente guiar.
+- *Cálculos e planilha:* Auxiliou na formação das tabelas e nos mapas de Karnough encontrados, e foi utilizada para fazer o diagrama de acordo com o funcionamento do circuito.
+- *Relatório:* Estruturação e revisão do texto.
 
 ## 6. Divisão do trabalho
 
